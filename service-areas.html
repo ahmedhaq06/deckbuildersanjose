@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Service Areas &amp; Neighborhoods | San Jose Decks &amp; Patios</title>
+  <meta name="description" content="Explore the neighborhoods and communities served by San Jose Decks & Patios throughout San Jose, Los Gatos, Saratoga, Campbell, and the greater South Bay area.">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+
+
+  <!-- Navigation Header -->
+  <header class="main-header" id="siteHeader">
+    <div class="container navbar">
+      <a href="index.html" class="brand-logo" aria-label="San Jose Decks &amp; Patios Home">
+        <img src="images/logo.png" alt="San Jose Decks &amp; Patios Logo" class="site-logo">
+      </a>
+
+      <nav aria-label="Main menu">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="gallery.html" class="nav-link">Portfolio</a></li>
+          <li><a href="service-areas.html" class="nav-link active">Service Areas</a></li>
+          <li><a href="about.html" class="nav-link">About Joel &amp; Crew</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="contact.html" class="btn btn-primary">
+          <span>Get Free Quote</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+      <button class="mobile-toggle" aria-label="Open mobile navigation">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="drawer-backdrop"></div>
+  <aside class="mobile-drawer" aria-label="Mobile navigation menu">
+    <div>
+      <div class="drawer-header">
+        <a href="index.html" aria-label="San Jose Decks &amp; Patios Home">
+          <img src="images/logo.png" alt="San Jose Decks &amp; Patios Logo" class="drawer-logo">
+        </a>
+        <button class="drawer-close" aria-label="Close navigation">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+      <ul class="drawer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html">Portfolio</a></li>
+        <li><a href="service-areas.html">Service Areas</a></li>
+        <li><a href="about.html">About Joel &amp; Crew</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+    <div>
+      <a href="tel:408-676-4088" class="btn btn-outline-cedar" style="width: 100%; margin-bottom: 12px;">Call / Text 408-676-4088</a>
+      <a href="contact.html" class="btn btn-primary" style="width: 100%;">Request Free Estimate</a>
+    </div>
+  </aside>
+
+  <!-- Banner -->
+  <section class="page-banner">
+    <div class="container text-center">
+      <div class="section-tag">South Bay Regional Coverage</div>
+      <h1 class="section-title">San Jose Neighborhood Directory &amp; Service Radius</h1>
+      <p class="section-subtitle">
+        Joel and our crew proudly serve homeowners across all districts of San Jose and neighboring cities throughout Santa Clara County and the Peninsula.
+      </p>
+    </div>
+  </section>
+
+  <!-- Neighborhoods Explorer Section -->
+  <section class="py-section">
+    <div class="container">
+      <!-- Search & Filter Controls -->
+      <div class="neighborhood-search-box">
+        <div class="search-input-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="text" class="neighborhood-search-input" placeholder="Search your neighborhood or street (e.g. Almaden, Cambrian, Willow Glen)...">
+        </div>
+
+        <div class="area-filters-group">
+          <button class="area-filter-btn active" data-region="all">All South Bay</button>
+          <button class="area-filter-btn" data-region="south">South San Jose</button>
+          <button class="area-filter-btn" data-region="central">Central &amp; Downtown</button>
+          <button class="area-filter-btn" data-region="west">West San Jose &amp; Campbell</button>
+          <button class="area-filter-btn" data-region="east">Evergreen &amp; East Foothills</button>
+          <button class="area-filter-btn" data-region="cities">Surrounding Cities</button>
+        </div>
+      </div>
+
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
+        <span id="neighborhoodCountBadge" style="font-size: 0.88rem; color: var(--cedar-light); font-weight: 600;">Showing 36 communities in South Bay</span>
+        <span style="font-size: 0.85rem; color: var(--text-dim);">Anything within 1-hour of San Jose is a YES service area</span>
+      </div>
+
+      <!-- Preserved Content Cards Grid -->
+      <div class="neighborhoods-grid">
+
+        <!-- Surrounding Cities (Key High-Ticket Markets) -->
+        <div class="neighborhood-card" data-name="los gatos" data-region="cities">
+          <div class="neighborhood-header">
+            <h3 class="neighborhood-name">Los Gatos</h3>
+            <span class="neighborhood-region-tag">Surrounding City</span>
+          </div>
+          <p class="neighborhood-desc">
+            Nestled along the foothills of the Santa Cruz Mountains, Los Gatos properties frequently feature custom multi-tier redwood decks, covered outdoor kitchens, and hillside viewing platforms that maximize panoramic natural scenery.
+          </p>
+          <div class="neighborhood-footer-action">
+            <span>Santa Clara County</span>
+            <a href="contact.html?area=Los+Gatos" class="neighborhood-estimate-link">Request Estimate &rarr;</a>
+          </div>
+        </div>
+
+        <div class="neighborhood-card" data-name="saratoga" data-region="cities">
+          <div class="neighborhood-header">
+            <h3 class="neighborhood-name">Saratoga</h3>
+            <span class="neighborhood-region-tag">Surrounding City</span>
+          </div>
+          <p class="neighborhood-desc">
+            Renowned for expansive residential parcels and upscale architecture, Saratoga homeowners rely on our precision team for bioclimatic pergolas, heavy timber pavilions, and premium TimberTech composite deck expansions.
+          </p>
+          <div class="neighborhood-footer-action">
+            <span>Santa Clara County</span>
+            <a href="contact.html?area=Saratoga" class="neighborhood-estimate-link">Request Estimate &rarr;</a>
+          </div>
+        </div>
+
+        <div class="neighborhood-card" data-name="campbell" data-region="cities">
+          <div class="neighborhood-header">
+            <h3 class="neighborhood-name">Campbell</h3>
+            <span class="neighborhood-region-tag">Surrounding City</span>
+          </div>
+          <p class="neighborhood-desc">
+            Centrally located with vibrant suburban neighborhoods, Campbell properties benefit from covered patio extensions, deck restorations, and modern horizontal privacy walls tailored for compact and spacious backyards alike.
+          </p>
+          <div class="neighborhood-footer-action">
+            <span>Santa Clara County</span>
+            <a href="contact.html?area=Campbell" class="neighborhood-estimate-link">Request Estimate &rarr;</a>
+          </div>
+        </div>
+
+        <div class="neighborhood-card" data-name="willow glen" data-region="central">
+          <div class="neighborhood-header">
+            <h3 class="neighborhood-name">Willow Glen</h3>
+            <span class="neighborhood-region-tag">Central San Jose</span>
+          </div>
+          <p class="neighborhood-desc">
+            Known for tree-lined streets and historic craftsman architecture, Willow Glen homes look magnificent with architecturally matched Western red cedar decks and custom tongue-and-groove patio covers.
+          </p>
+          <div class="neighborhood-footer-action">
+            <span>San Jose, CA</span>
+            <a href="contact.html?area=Willow+Glen" class="neighborhood-estimate-link">Request Estimate &rarr;</a>
+          </div>
+        </div>
+
+        <div class="neighborhood-card" data-name="almaden valley almaden hill estates" data-region="south">
+          <div class="neighborhood-header">
+            <h3 class="neighborhood-name">Almaden Hill Estates</h3>
+            <span class="neighborhood-region-tag">South San Jose</span>
+          </div>
+          <p class="neighborhood-desc">
+            An exclusive residential community located in the southern Almaden Valley area of San Jose. Known for its upscale homes and spacious estate lots requiring substantial multi-level decks and poolside pavilions.
+          </p>
+          <div class="neighborhood-footer-action">
+            <span>Almaden Valley</span>
+            <a href="contact.html?area=Almaden+Hill+Estates" class="neighborhood-estimate-link">Request Estimate &rarr;</a>
+          </div>
+        </div>
+
+        <div class="neighborhood-card" data-name="the almaden villas" data-region="south">
+          <div class="neighborhood-header">
+            <h3 class="neighborhood-name">The Almaden Villas</h3>
+            <span class="neighborhood-region-tag">South San Jose</span>
+          </div>
+          <p class="neighborhood-desc">
+            Provides residents with a peaceful retreat in proximity to the conveniences of San Jose. Its combination of comfortable living spaces and natural surroundings makes it an appealing choice for luxury outdoor living.
+          </p>
+          <div class="neighborhood-footer-action">
+            <span>Almaden Valley</span>
+            <a href="contact.html?area=Almaden+Villas" class="neighborhood-estimate-link">Request Estimate &rarr;</a>
+          </div>
+        </div>
+
+        <div class="neighborhood-card" data-name="cambrian community" data-region="west">
+          <div class="neighborhood-header">
+            <h3 class="neighborhood-name">Cambrian Community</h3>
+            <span class="neighborhood-region-tag">West San Jose</span>
+          </div>
+          <p class="neighborhood-desc">
+            Known for top-rated schools and tight-knit neighborhoods, Cambrian families frequently build safe, splinter-free composite decks and shade structures for family gatherings and outdoor play areas.
+          </p>
+          <div class="neighborhood-footer-action">
+            <span>Cambrian Park</span>
+            <a href="contact.html?area=Cambrian" class="neighborhood-estimate-link">Request Estimate &rarr;</a>
+          </div>
+        </div>
+
+        <div class="neighborhood-card" data-name="garden alameda" data-region="central">
+          <div class="neighborhood-header">
+            <h3 class="neighborhood-name">Garden Alameda</h3>
+            <span class="neighborhood-region-tag">Central San Jose</span>
+          </div>
+          <p class="neighborhood-desc">
+            Bordered by West Taylor Street on the north and The Alameda on the west and south. Close to regional landmarks like California's Great America and the historic Winchester Mystery House.
+          </p>
+          <div class="neighborhood-footer-action">
+            <span>Central San Jose</span>
+            <a href="contact.html?area=Garden+Alameda" class="neighborhood-estimate-link">Request Estimate &rarr;</a>
+          </div>
+        </div>
+
+        <div class="neighborhood-card" data-name="california maison" data-region="south">
+          <div class="neighborhood-header">
+            <h3 class="neighborhood-name">California Maison</h3>
+            <span class="neighborhood-region-tag">South San Jose</span>
+          </div>
+          <p class="neighborhood-desc">
+            A close neighbor of Coyote Creek and Metcalf Park, where residents enjoy active outdoor lifestyles. Monterey Highway runs right through the district, providing swift access for our build crews.
+          </p>
+          <div class="neighborhood-footer-action">
+            <span>South San Jose</span>
+            <a href="contact.html?area=California+Maison" class="neighborhood-estimate-link">Request Estimate &rarr;</a>
+          </div>
+        </div>
+
+        <div class="neighborhood-card" data-name="rosemary gardens" data-region="central">
+          <div class="neighborhood-header">
+            <h3 class="neighborhood-name">Rosemary Gardens</h3>
+            <span class="neighborhood-region-tag">Central San Jose</span>
+          </div>
+          <p class="neighborhood-desc">
+            Notable for Rosemary Gardens Park with its expansive green spaces and playgrounds. Situated in the northern part of the city, Rosemary Gardens offers a peaceful family-friendly environment.
+          </p>
+          <div class="neighborhood-footer-action">
+            <span>North San Jose</span>
+            <a href="contact.html?area=Rosemary+Gardens" class="neighborhood-estimate-link">Request Estimate &rarr;</a>
+          </div>
+        </div>
+
+        <div class="neighborhood-card" data-name="farm drive" data-region="central">
+          <div class="neighborhood-header">
+            <h3 class="neighborhood-name">Farm Drive</h3>
+            <span class="neighborhood-region-tag">Central San Jose</span>
+          </div>
+          <p class="neighborhood-desc">
+            Offers an established residential experience within bustling San Jose. Its neighborhood character and access to local amenities make it a prime district for backyard deck additions.
+          </p>
+          <div class="neighborhood-footer-action">
+            <span>Central San Jose</span>
+            <a href="contact.html?area=Farm+Drive" class="neighborhood-estimate-link">Request Estimate &rarr;</a>
+          </div>
+        </div>
+
+        <div class="neighborhood-card" data-name="canoas garden" data-region="south">
+          <div class="neighborhood-header">
+            <h3 class="neighborhood-name">Canoas Garden</h3>
+            <span class="neighborhood-region-tag">South San Jose</span>
+          </div>
+          <p class="neighborhood-desc">
+            Found near the foothills of the Santa Cruz Mountains near Canoas Creek, Canoas Garden offers a tranquil, picturesque environment where raised decks take full advantage of natural slope topography.
+          </p>
+          <div class="neighborhood-footer-action">
+            <span>South San Jose</span>
+            <a href="contact.html?area=Canoas+Garden" class="neighborhood-estimate-link">Request Estimate &rarr;</a>
+          </div>
+        </div>
+
+        <div class="neighborhood-card" data-name="meadow fair" data-region="east">
+          <div class="neighborhood-header">
+            <h3 class="neighborhood-name">Meadow Fair</h3>
+            <span class="neighborhood-region-tag">East San Jose</span>
+          </div>
+          <p class="neighborhood-desc">
+            A tight-knit Eastside San Jose community with deep cultural roots and unique architectural character. Homeowners frequently invest in sturdy covered patios and backyard dining covers.
+          </p>
+          <div class="neighborhood-footer-action">
+            <span>East San Jose</span>
+            <a href="contact.html?area=Meadow+Fair" class="neighborhood-estimate-link">Request Estimate &rarr;</a>
+          </div>
+        </div>
+
+        <div class="neighborhood-card" data-name="spartan keyes" data-region="central">
+          <div class="neighborhood-header">
+            <h3 class="neighborhood-name">Spartan Keyes</h3>
+            <span class="neighborhood-region-tag">Central San Jose</span>
+          </div>
+          <p class="neighborhood-desc">
+            Home to San Jose State University, bringing an energetic atmosphere. Our contractors install private decks and pergolas that create quiet retreats within the urban core.
+          </p>
+          <div class="neighborhood-footer-action">
+            <span>Downtown / SJSU</span>
+            <a href="contact.html?area=Spartan+Keyes" class="neighborhood-estimate-link">Request Estimate &rarr;</a>
+          </div>
+        </div>
+
+        <div class="neighborhood-card" data-name="vinci south" data-region="east">
+          <div class="neighborhood-header">
+            <h3 class="neighborhood-name">Vinci South</h3>
+            <span class="neighborhood-region-tag">East San Jose</span>
+          </div>
+          <p class="neighborhood-desc">
+            Home to Vinci Park and Vinci Elementary School. Comprised of attractive single-family properties neighboring Vinci North and Flickinger South.
+          </p>
+          <div class="neighborhood-footer-action">
+            <span>Berryessa / East</span>
+            <a href="contact.html?area=Vinci+South" class="neighborhood-estimate-link">Request Estimate &rarr;</a>
+          </div>
+        </div>
+
+        <div class="neighborhood-card" data-name="valley view reed" data-region="south">
+          <div class="neighborhood-header">
+            <h3 class="neighborhood-name">Valley View Reed</h3>
+            <span class="neighborhood-region-tag">South San Jose</span>
+          </div>
+          <p class="neighborhood-desc">
+            Residents enjoy quick access to nearby shopping centers and recreational facilities. We build modern custom deck solutions that enhance residential entertainment value.
+          </p>
+          <div class="neighborhood-footer-action">
+            <span>South San Jose</span>
+            <a href="contact.html?area=Valley+View" class="neighborhood-estimate-link">Request Estimate &rarr;</a>
+          </div>
+        </div>
+
+        <div class="neighborhood-card" data-name="hensley historic" data-region="central">
+          <div class="neighborhood-header">
+            <h3 class="neighborhood-name">Hensley Historic District</h3>
+            <span class="neighborhood-region-tag">Central San Jose</span>
+          </div>
+          <p class="neighborhood-desc">
+            A beautiful historic neighborhood featuring classic architectural styling. We specialize in period-appropriate redwood porch and deck restorations adhering strictly to local codes.
+          </p>
+          <div class="neighborhood-footer-action">
+            <span>Downtown San Jose</span>
+            <a href="contact.html?area=Hensley" class="neighborhood-estimate-link">Request Estimate &rarr;</a>
+          </div>
+        </div>
+
+        <div class="neighborhood-card" data-name="sunrise almaden" data-region="south">
+          <div class="neighborhood-header">
+            <h3 class="neighborhood-name">Sunrise Almaden</h3>
+            <span class="neighborhood-region-tag">South San Jose</span>
+          </div>
+          <p class="neighborhood-desc">
+            Located in southern San Jose, offering a serene, picturesque lifestyle where custom shade pergolas and redwood decking enhance scenic foothill vistas.
+          </p>
+          <div class="neighborhood-footer-action">
+            <span>Almaden Valley</span>
+            <a href="contact.html?area=Sunrise+Almaden" class="neighborhood-estimate-link">Request Estimate &rarr;</a>
+          </div>
+        </div>
+
+        <div class="neighborhood-card" data-name="almaden meadows" data-region="south">
+          <div class="neighborhood-header">
+            <h3 class="neighborhood-name">Almaden Meadows</h3>
+            <span class="neighborhood-region-tag">South San Jose</span>
+          </div>
+          <p class="neighborhood-desc">
+            With peaceful streets and scenic surroundings, Almaden Meadows provides an ideal backdrop for custom composite decks, integrated bench seating, and fire pit platforms.
+          </p>
+          <div class="neighborhood-footer-action">
+            <span>Almaden Valley</span>
+            <a href="contact.html?area=Almaden+Meadows" class="neighborhood-estimate-link">Request Estimate &rarr;</a>
+          </div>
+        </div>
+
+        <div class="neighborhood-card" data-name="auzerais josefa" data-region="central">
+          <div class="neighborhood-header">
+            <h3 class="neighborhood-name">Auzerais – Josefa</h3>
+            <span class="neighborhood-region-tag">Central San Jose</span>
+          </div>
+          <p class="neighborhood-desc">
+            A dynamic urban neighborhood near downtown San Jose offering a mix of residential spaces where space-efficient second-story balconies and patio pergolas shine.
+          </p>
+          <div class="neighborhood-footer-action">
+            <span>Central San Jose</span>
+            <a href="contact.html?area=Auzerais" class="neighborhood-estimate-link">Request Estimate &rarr;</a>
+          </div>
+        </div>
+
+        <div class="neighborhood-card" data-name="guadalupe oak grove" data-region="south">
+          <div class="neighborhood-header">
+            <h3 class="neighborhood-name">Guadalupe Oak Grove</h3>
+            <span class="neighborhood-region-tag">South San Jose</span>
+          </div>
+          <p class="neighborhood-desc">
+            Close to Guadalupe River trails, natural parks, and scenic reserves. Ideal for moisture-resistant composite decks built to withstand proximity to regional waterways.
+          </p>
+          <div class="neighborhood-footer-action">
+            <span>South San Jose</span>
+            <a href="contact.html?area=Guadalupe+Oak" class="neighborhood-estimate-link">Request Estimate &rarr;</a>
+          </div>
+        </div>
+
+        <div class="neighborhood-card" data-name="lone hill highlands" data-region="east">
+          <div class="neighborhood-header">
+            <h3 class="neighborhood-name">Lone Hill Highlands</h3>
+            <span class="neighborhood-region-tag">Evergreen / East</span>
+          </div>
+          <p class="neighborhood-desc">
+            Known for its elevated vantage point providing stunning views over the South Bay hills. We build engineered cantilever and multi-level decks designed for seismic stability.
+          </p>
+          <div class="neighborhood-footer-action">
+            <span>Evergreen Area</span>
+            <a href="contact.html?area=Lone+Hill" class="neighborhood-estimate-link">Request Estimate &rarr;</a>
+          </div>
+        </div>
+
+        <div class="neighborhood-card" data-name="blossom valley" data-region="south">
+          <div class="neighborhood-header">
+            <h3 class="neighborhood-name">Blossom Valley</h3>
+            <span class="neighborhood-region-tag">South San Jose</span>
+          </div>
+          <p class="neighborhood-desc">
+            A beloved South San Jose community with great school access. We frequently build weather-ready covered patios and deck upgrades for growing families.
+          </p>
+          <div class="neighborhood-footer-action">
+            <span>South San Jose</span>
+            <a href="contact.html?area=Blossom+Valley" class="neighborhood-estimate-link">Request Estimate &rarr;</a>
+          </div>
+        </div>
+
+        <div class="neighborhood-card" data-name="glenview serenity" data-region="south">
+          <div class="neighborhood-header">
+            <h3 class="neighborhood-name">Glenview Serenity</h3>
+            <span class="neighborhood-region-tag">South San Jose</span>
+          </div>
+          <p class="neighborhood-desc">
+            Located near Almaden Golf &amp; Country Club where homeowners unwind with outdoor activities. Custom patio covers and outdoor dining decks complement this relaxed lifestyle.
+          </p>
+          <div class="neighborhood-footer-action">
+            <span>Almaden Golf Area</span>
+            <a href="contact.html?area=Glenview+Serenity" class="neighborhood-estimate-link">Request Estimate &rarr;</a>
+          </div>
+        </div>
+
+        <div class="neighborhood-card" data-name="mount pleasant south" data-region="east">
+          <div class="neighborhood-header">
+            <h3 class="neighborhood-name">Mount Pleasant South</h3>
+            <span class="neighborhood-region-tag">Evergreen / East</span>
+          </div>
+          <p class="neighborhood-desc">
+            Known for well-established homes and quiet streets on the eastern slopes of San Jose. Custom wood decks add major entertaining functionality to these sprawling yards.
+          </p>
+          <div class="neighborhood-footer-action">
+            <span>East San Jose</span>
+            <a href="contact.html?area=Mount+Pleasant" class="neighborhood-estimate-link">Request Estimate &rarr;</a>
+          </div>
+        </div>
+
+        <div class="neighborhood-card" data-name="anderson west" data-region="west">
+          <div class="neighborhood-header">
+            <h3 class="neighborhood-name">Anderson West</h3>
+            <span class="neighborhood-region-tag">West San Jose</span>
+          </div>
+          <p class="neighborhood-desc">
+            Home to Anderson Elementary School and Starbird town. We build pest-resistant composite decks and covered patio enclosures for these classic suburban residences.
+          </p>
+          <div class="neighborhood-footer-action">
+            <span>West San Jose</span>
+            <a href="contact.html?area=Anderson+West" class="neighborhood-estimate-link">Request Estimate &rarr;</a>
+          </div>
+        </div>
+
+        <div class="neighborhood-card" data-name="ohlone" data-region="central">
+          <div class="neighborhood-header">
+            <h3 class="neighborhood-name">Ohlone</h3>
+            <span class="neighborhood-region-tag">Central San Jose</span>
+          </div>
+          <p class="neighborhood-desc">
+            Named after the indigenous Ohlone people who historically inhabited the region, embracing rich cultural heritage and diverse residential communities.
+          </p>
+          <div class="neighborhood-footer-action">
+            <span>Central San Jose</span>
+            <a href="contact.html?area=Ohlone" class="neighborhood-estimate-link">Request Estimate &rarr;</a>
+          </div>
+        </div>
+
+        <div class="neighborhood-card" data-name="calero reservoir" data-region="south">
+          <div class="neighborhood-header">
+            <h3 class="neighborhood-name">Calero</h3>
+            <span class="neighborhood-region-tag">South San Jose</span>
+          </div>
+          <p class="neighborhood-desc">
+            Situated near the Santa Teresa Hills and Calero Reservoir, offering a tranquil nature-rich setting where custom pavilions and outdoor shade decks blend seamlessly with the countryside.
+          </p>
+          <div class="neighborhood-footer-action">
+            <span>South San Jose</span>
+            <a href="contact.html?area=Calero" class="neighborhood-estimate-link">Request Estimate &rarr;</a>
+          </div>
+        </div>
+
+        <div class="neighborhood-card" data-name="yerba buena" data-region="east">
+          <div class="neighborhood-header">
+            <h3 class="neighborhood-name">Yerba Buena</h3>
+            <span class="neighborhood-region-tag">Evergreen / East</span>
+          </div>
+          <p class="neighborhood-desc">
+            Near the Yerba Buena Creek Trail with scenic walking and nature paths. We construct sturdy timber decks that provide private vantage points over the surrounding hills.
+          </p>
+          <div class="neighborhood-footer-action">
+            <span>East San Jose</span>
+            <a href="contact.html?area=Yerba+Buena" class="neighborhood-estimate-link">Request Estimate &rarr;</a>
+          </div>
+        </div>
+
+        <div class="neighborhood-card" data-name="carson berryessa" data-region="east">
+          <div class="neighborhood-header">
+            <h3 class="neighborhood-name">Carson</h3>
+            <span class="neighborhood-region-tag">Evergreen / East</span>
+          </div>
+          <p class="neighborhood-desc">
+            Located near the Berryessa area, Carson offers a comfortable suburban living environment where our deck repair, staining, and new patio cover installations are in high demand.
+          </p>
+          <div class="neighborhood-footer-action">
+            <span>Berryessa</span>
+            <a href="contact.html?area=Carson" class="neighborhood-estimate-link">Request Estimate &rarr;</a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Consultation Booking CTA -->
+      <div style="margin-top: 60px; background: var(--bg-surface); border: 1px solid var(--border-cedar); border-radius: var(--radius-lg); padding: 48px; text-align: center;">
+        <h3 style="font-size: 2rem; margin-bottom: 12px;">Don't See Your Specific Street or Neighborhood?</h3>
+        <p style="color: var(--text-muted); font-size: 1.05rem; max-width: 680px; margin: 0 auto 28px;">
+          If you are located within an hour's drive of San Jose (including Cupertino, Sunnyvale, Mountain View, Milpitas, Morgan Hill, or Santa Clara), our answer is almost always <strong>YES</strong>!
+        </p>
+        <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
+          <a href="contact.html" class="btn btn-primary btn-lg"><span>Schedule Free Consultation</span></a>
+          <a href="tel:408-676-4088" class="btn btn-secondary btn-lg"><span>Call Joel: 408-676-4088</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Global Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="brand-logo" aria-label="San Jose Decks &amp; Patios Home">
+            <img src="images/logo-white.png" alt="San Jose Decks &amp; Patios Logo" class="footer-logo">
+          </a>
+          <p class="footer-col-desc">
+            San Jose's premier custom deck builder and patio cover contractor. Over 16 years of architectural wood and composite craftsmanship across the Bay Area.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Services</h4>
+          <ul class="footer-links">
+            <li><a href="services.html#composite-decks">Composite Decks</a></li>
+            <li><a href="services.html#wood-decks">Redwood Decks</a></li>
+            <li><a href="services.html#patio-covers">Patio Covers</a></li>
+            <li><a href="services.html#pergolas">Custom Pergolas</a></li>
+            <li><a href="services.html#pavilions">Backyard Pavilions</a></li>
+            <li><a href="services.html#deck-repairs">Deck Repair &amp; Retrofit</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gallery.html">Project Portfolio</a></li>
+            <li><a href="service-areas.html">Service Areas &amp; Maps</a></li>
+            <li><a href="about.html">About Joel &amp; Crew</a></li>
+            <li><a href="about.html#permits-faq">Licensing &amp; Permits FAQ</a></li>
+            <li><a href="contact.html">Request Free Estimate</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Get In Touch</h4>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <div>
+              <strong>Phone / Text:</strong><br>
+              <a href="tel:408-676-4088" style="color: var(--cedar-light);">408-676-4088</a>
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <div>
+              <strong>Office Address:</strong><br>
+              412 Page Street #D, San Jose, CA
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 San Jose Decks &amp; Patios. All Rights Reserved. Licensed, Bonded &amp; Insured in CA.
+        </div>
+        <div>
+          Serving San Jose, Los Gatos, Saratoga, Campbell, and surrounding Bay Area.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,749 @@
+/* Interactive Components Styling (White Luxury Theme) */
+
+/* ========================================================
+   1. Before & After Image Comparison Slider
+   ======================================================== */
+.comparison-container {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  height: 480px;
+  margin: 36px auto 0;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-subtle);
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.comparison-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.comparison-before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 50%;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.comparison-before img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 900px;
+  max-width: none;
+  object-fit: cover;
+}
+
+.comparison-handle {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 4px;
+  background: var(--cedar);
+  z-index: 3;
+  cursor: ew-resize;
+  transform: translateX(-50%);
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+}
+
+.comparison-handle-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--cedar);
+  border: 3px solid #ffffff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+}
+
+.comparison-handle-button svg {
+  width: 20px;
+  height: 20px;
+}
+
+.comparison-label {
+  position: absolute;
+  bottom: 18px;
+  padding: 6px 14px;
+  background: rgba(17, 24, 39, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-full);
+  color: #ffffff;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  z-index: 4;
+  backdrop-filter: blur(8px);
+}
+
+.label-before {
+  left: 18px;
+}
+
+.label-after {
+  right: 18px;
+}
+
+@media (max-width: 768px) {
+  .comparison-container {
+    height: 320px;
+  }
+}
+
+/* ========================================================
+   2. Interactive Project Cost & Scope Estimator Widget
+   ======================================================== */
+.estimator-widget {
+  background: #ffffff;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 44px 40px;
+  box-shadow: var(--shadow-md);
+  position: relative;
+  overflow: hidden;
+}
+
+.estimator-widget::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--cedar);
+}
+
+.estimator-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 48px;
+}
+
+.step-label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--cedar);
+  margin-bottom: 8px;
+  display: block;
+}
+
+.option-pill-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.option-pill {
+  background: #f9fafb;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 14px 16px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.option-pill:hover {
+  border-color: var(--border-light);
+  background: #f3f4f6;
+}
+
+.option-pill.active {
+  background: var(--bg-accent-subtle);
+  border-color: var(--cedar);
+  box-shadow: 0 0 0 1px var(--cedar);
+}
+
+.option-pill input {
+  display: none;
+}
+
+.option-pill-title {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+.option-pill-desc {
+  font-size: 0.78rem;
+  color: var(--text-dim);
+}
+
+/* Range Slider */
+.slider-container {
+  margin-bottom: 28px;
+}
+
+.slider-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.slider-val-display {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--cedar);
+}
+
+.custom-range-slider {
+  width: 100%;
+  height: 8px;
+  border-radius: var(--radius-full);
+  background: #e5e7eb;
+  outline: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+}
+
+.custom-range-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--cedar);
+  border: 2px solid #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: transform var(--transition-fast);
+}
+
+.custom-range-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+}
+
+/* Estimator Calculation Summary Card (Deep Luxury Slate inside White Container) */
+.estimator-summary-card {
+  background: #111827;
+  border-radius: var(--radius-md);
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #ffffff;
+  box-shadow: var(--shadow-md);
+}
+
+.summary-header h4 {
+  font-size: 1.25rem;
+  margin-bottom: 4px;
+  color: #ffffff;
+}
+
+.summary-header p {
+  font-size: 0.85rem;
+  color: #9ca3af;
+}
+
+.price-range-box {
+  margin: 24px 0;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius-sm);
+  border: 1px dashed rgba(184, 121, 44, 0.5);
+  text-align: center;
+}
+
+.price-range-label {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #d1d5db;
+  font-weight: 600;
+}
+
+.price-range-value {
+  font-family: var(--font-heading);
+  font-size: 2.1rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 4px 0;
+}
+
+.timeline-value {
+  font-size: 0.85rem;
+  color: #fbbf24;
+  font-weight: 600;
+}
+
+.summary-includes-list {
+  list-style: none;
+  margin-bottom: 24px;
+}
+
+.summary-includes-list li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: #d1d5db;
+  margin-bottom: 8px;
+}
+
+.summary-includes-list li svg {
+  width: 16px;
+  height: 16px;
+  color: #10b981;
+  flex-shrink: 0;
+}
+
+@media (max-width: 900px) {
+  .estimator-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .estimator-widget {
+    padding: 28px 20px;
+  }
+}
+
+/* ========================================================
+   3. Neighborhoods & Service Areas Filter Component
+   ======================================================== */
+.neighborhood-search-box {
+  background: #ffffff;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 20px 24px;
+  margin-bottom: 36px;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  flex-wrap: wrap;
+  box-shadow: var(--shadow-sm);
+}
+
+.search-input-wrap {
+  position: relative;
+  flex: 1;
+  min-width: 260px;
+}
+
+.search-input-wrap svg {
+  position: absolute;
+  top: 50%;
+  left: 14px;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  color: var(--text-dim);
+}
+
+.neighborhood-search-input {
+  width: 100%;
+  padding: 12px 14px 12px 42px;
+  border-radius: var(--radius-sm);
+  background: #f9fafb;
+  border: 1px solid var(--border-light);
+  color: #111827;
+  font-size: 0.95rem;
+}
+
+.neighborhood-search-input:focus {
+  outline: none;
+  border-color: var(--cedar);
+  background: #ffffff;
+}
+
+.area-filters-group {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.area-filter-btn {
+  background: #f3f4f6;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-full);
+  padding: 7px 16px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.area-filter-btn:hover {
+  border-color: var(--border-light);
+  color: #111827;
+}
+
+.area-filter-btn.active {
+  background: var(--cedar);
+  color: #ffffff;
+  border-color: var(--cedar);
+}
+
+.neighborhoods-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.neighborhood-card {
+  background: #ffffff;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  transition: all var(--transition-smooth);
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-sm);
+}
+
+.neighborhood-card:hover {
+  border-color: var(--border-cedar);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.neighborhood-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.neighborhood-name {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+.neighborhood-region-tag {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--cedar);
+  background: var(--bg-accent-subtle);
+  padding: 3px 8px;
+  border-radius: var(--radius-full);
+  text-transform: uppercase;
+}
+
+.neighborhood-desc {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 18px;
+  flex-grow: 1;
+}
+
+.neighborhood-footer-action {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 14px;
+  border-top: 1px solid var(--border-subtle);
+  font-size: 0.82rem;
+  color: var(--text-dim);
+}
+
+.neighborhood-estimate-link {
+  color: var(--cedar);
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.neighborhood-estimate-link:hover {
+  color: #111827;
+}
+
+@media (max-width: 992px) {
+  .neighborhoods-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .neighborhoods-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ========================================================
+   4. Project Gallery Filter and Grid
+   ======================================================== */
+.gallery-filter-bar {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.gallery-filter-btn {
+  background: #ffffff;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-full);
+  padding: 10px 22px;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-fast);
+}
+
+.gallery-filter-btn:hover {
+  border-color: var(--border-light);
+  color: #111827;
+}
+
+.gallery-filter-btn.active {
+  background: var(--cedar);
+  color: #ffffff;
+  border-color: var(--cedar);
+}
+
+.gallery-masonry-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.gallery-item {
+  position: relative;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  aspect-ratio: 4 / 3;
+  background: #f3f4f6;
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.08);
+}
+
+.gallery-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(17, 24, 39, 0.75);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 24px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .gallery-overlay {
+  opacity: 1;
+}
+
+.gallery-cat {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #fbbf24;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 4px;
+}
+
+.gallery-title {
+  font-size: 1.15rem;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+@media (max-width: 900px) {
+  .gallery-masonry-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .gallery-masonry-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ========================================================
+   5. FAQ Accordion Component
+   ======================================================== */
+.faq-list {
+  max-width: 820px;
+  margin: 40px auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.faq-item {
+  background: #ffffff;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  transition: border-color var(--transition-fast);
+  box-shadow: var(--shadow-sm);
+}
+
+.faq-item.open {
+  border-color: var(--cedar);
+}
+
+.faq-trigger {
+  width: 100%;
+  padding: 20px 24px;
+  background: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  text-align: left;
+  cursor: pointer;
+  color: #111827;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.faq-trigger svg {
+  width: 20px;
+  height: 20px;
+  color: var(--cedar);
+  flex-shrink: 0;
+  transition: transform var(--transition-smooth);
+}
+
+.faq-item.open .faq-trigger svg {
+  transform: rotate(180deg);
+}
+
+.faq-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1), padding 0.3s ease;
+  padding: 0 24px;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+.faq-item.open .faq-content {
+  padding-bottom: 22px;
+}
+
+/* ========================================================
+   6. Modal / Lead Callback Confirmation Dialog
+   ======================================================== */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 3000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  transition: opacity 0.28s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.28s;
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+}
+
+.modal-dialog {
+  background: #ffffff;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 40px;
+  max-width: 480px;
+  width: 100%;
+  text-align: center;
+  box-shadow: var(--shadow-lg);
+  transform: scale(0.92) translateY(12px);
+  opacity: 0;
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.28s ease;
+}
+
+.modal-overlay.active .modal-dialog {
+  transform: scale(1) translateY(0);
+  opacity: 1;
+}
+
+.modal-check-icon {
+  width: 64px;
+  height: 64px;
+  background: rgba(5, 150, 105, 0.1);
+  border: 2px solid var(--emerald);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  color: var(--emerald);
+}
+
+.modal-check-icon svg {
+  width: 32px;
+  height: 32px;
+}
+
+.modal-dialog h3 {
+  font-size: 1.6rem;
+  margin-bottom: 12px;
+  color: #111827;
+}
+
+.modal-dialog p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 540px) {
+  .modal-dialog {
+    padding: 28px 18px;
+    border-radius: var(--radius-md);
+  }
+  .modal-dialog h3 {
+    font-size: 1.35rem;
+  }
+}
